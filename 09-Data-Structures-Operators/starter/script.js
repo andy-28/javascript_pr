@@ -12,8 +12,7 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  // ES6 enhanced object literals
-  openingHours,
+  
 
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -49,3 +48,12 @@ const [first, second] = restaurant.categories;
 console.log(first, second);
 
 const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+// Mutating variables
+
+let d = 111;
+let e = 999;
+const obj = {d: 23, e: 7, c: 14};
+({ d, e} = obj);
+console.log(d,e);
